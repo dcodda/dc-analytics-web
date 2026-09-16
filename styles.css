@@ -97,19 +97,25 @@ body {
     max-width: 700px;
 }
 
-/* ---------------- NAVBAR EDITORIAL ---------------- */
+/* ---------------- NAVBAR INTELIGENTE Y SOBRIA ---------------- */
 .navbar {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 1000;
-    background-color: rgba(8, 16, 36, 0.92);
+    background-color: rgba(8, 16, 36, 0.94);
     backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     border-bottom: 1px solid var(--border-subtle);
-    height: 80px;
+    height: 74px;
     display: flex;
     align-items: center;
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.navbar.nav-hidden {
+    transform: translateY(-100%);
 }
 
 .navbar .container {
@@ -121,14 +127,32 @@ body {
 .nav-brand {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 12px;
     text-decoration: none;
 }
 
 .nav-logo {
-    width: 115px;
-    height: auto;
+    height: 44px;
+    width: 44px;
+    max-height: 44px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid rgba(56, 189, 248, 0.25);
     display: block;
+}
+
+.nav-brand-text {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-brand-name {
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    color: var(--text-primary);
+    font-family: var(--font-sans);
 }
 
 .nav-badge {
@@ -146,7 +170,7 @@ body {
 .nav-menu {
     display: flex;
     align-items: center;
-    gap: 36px;
+    gap: 32px;
     list-style: none;
 }
 
@@ -203,47 +227,170 @@ body {
     border-color: var(--border-strong);
 }
 
-/* ---------------- HERO ASIMÉTRICO ---------------- */
+/* ---------------- HERO ASIMÉTRICO CON PREVIEW VISUAL ---------------- */
 .hero {
-    padding-top: 170px;
-    padding-bottom: 100px;
+    padding-top: 155px;
+    padding-bottom: 90px;
 }
 
 .hero-grid {
     display: grid;
-    grid-template-columns: 1.25fr 0.75fr;
-    gap: 60px;
-    align-items: flex-end;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 50px;
+    align-items: center;
 }
 
 .hero-statement {
-    font-size: 46px;
+    font-size: 44px;
     font-weight: 800;
     color: var(--text-primary);
     letter-spacing: -1.2px;
-    line-height: 1.15;
+    line-height: 1.18;
+    margin-bottom: 22px;
 }
 
 .hero-statement span {
     color: var(--accent-sky);
-    display: block;
-}
-
-.hero-editorial-copy {
-    border-left: 2px solid var(--border-subtle);
-    padding-left: 28px;
+    display: inline;
 }
 
 .hero-editorial-copy p {
     font-size: 16px;
     color: var(--text-secondary);
     line-height: 1.7;
-    margin-bottom: 28px;
+    margin-bottom: 26px;
 }
 
 .hero-cta-group {
     display: flex;
     gap: 16px;
+    flex-wrap: wrap;
+}
+
+/* Tarjeta Visual de Vista Previa en Hero */
+.hero-visual-card {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-strong);
+    border-radius: 10px;
+    padding: 16px;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45), 0 0 20px rgba(56, 189, 248, 0.08);
+    position: relative;
+    transition: var(--transition);
+}
+
+.hero-visual-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.55), 0 0 25px rgba(56, 189, 248, 0.15);
+}
+
+.hero-visual-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    padding: 0 4px;
+}
+
+.hero-live-badge {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--accent-emerald);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 600;
+}
+
+.hero-live-dot {
+    width: 8px;
+    height: 8px;
+    background-color: var(--accent-emerald);
+    border-radius: 50%;
+    box-shadow: 0 0 8px var(--accent-emerald);
+}
+
+.hero-visual-img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    display: block;
+    border: 1px solid var(--border-subtle);
+}
+
+.hero-visual-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 14px;
+}
+
+.hero-mini-stat {
+    background-color: var(--bg-main);
+    border: 1px solid var(--border-subtle);
+    border-radius: 5px;
+    padding: 10px 12px;
+}
+
+.hero-mini-stat .val {
+    font-family: var(--font-mono);
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--accent-sky);
+}
+
+.hero-mini-stat .lbl {
+    font-size: 11px;
+    color: var(--text-secondary);
+}
+
+/* ---------------- PROBLEMAS QUE RESOLVEMOS (AMIGABLE) ---------------- */
+.problem-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 36px;
+}
+
+.problem-card {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    padding: 32px 26px;
+    transition: var(--transition);
+    position: relative;
+}
+
+.problem-card:hover {
+    border-color: var(--border-strong);
+    transform: translateY(-3px);
+    background-color: var(--bg-surface-elevated);
+}
+
+.problem-badge {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--accent-sky);
+    background-color: rgba(56, 189, 248, 0.08);
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    padding: 4px 10px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-bottom: 16px;
+}
+
+.problem-title {
+    font-size: 19px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+    line-height: 1.35;
+}
+
+.problem-desc {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.65;
 }
 
 /* ---------------- MANIFIESTO DEL FUNDADOR ---------------- */
@@ -620,6 +767,45 @@ body {
     margin-top: 2px;
 }
 
+/* ---------------- BANNERS E IMÁGENES VISUALES ---------------- */
+.arch-banner-wrap {
+    margin-top: 36px;
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: var(--bg-surface);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+.arch-banner-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    max-height: 600px;
+}
+
+.case-img-card {
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 20px;
+    background-color: var(--bg-main);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.case-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.case-img-card:hover .case-img {
+    transform: scale(1.015);
+}
+
 /* ---------------- CTA FINAL DE AUTOR ---------------- */
 .contact-block {
     text-align: center;
@@ -668,7 +854,8 @@ body {
     .case-split,
     .comparison-grid,
     .editorial-services-grid,
-    .architecture-flow {
+    .architecture-flow,
+    .problem-grid {
         grid-template-columns: 1fr;
     }
     .hero-statement {

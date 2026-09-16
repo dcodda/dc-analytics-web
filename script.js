@@ -23,7 +23,37 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // -------------------------------------------------------------
-    // 2. ENLACE DIRECTO DE WHATSAPP CON MENSAJE PREDEFINIDO
+    // 2. NAVBAR INTELIGENTE FLUIDA (Ocultar al bajar, mostrar al subir)
+    // -------------------------------------------------------------
+    const navbar = document.querySelector(".navbar");
+    let lastScrollY = window.scrollY;
+    let isTicking = false;
+
+    window.addEventListener("scroll", () => {
+        if (!isTicking) {
+            window.requestAnimationFrame(() => {
+                const currentScrollY = window.scrollY;
+
+                // Siempre visible al inicio de la página
+                if (currentScrollY <= 30) {
+                    navbar.classList.remove("nav-hidden");
+                } else if (currentScrollY > lastScrollY && currentScrollY > 100) {
+                    // Scrolleando hacia abajo: ocultar suavemente
+                    navbar.classList.add("nav-hidden");
+                } else if (currentScrollY < lastScrollY) {
+                    // Scrolleando hacia arriba: reaparecer fluidamente
+                    navbar.classList.remove("nav-hidden");
+                }
+
+                lastScrollY = currentScrollY;
+                isTicking = false;
+            });
+            isTicking = true;
+        }
+    }, { passive: true });
+
+    // -------------------------------------------------------------
+    // 3. ENLACE DIRECTO DE WHATSAPP CON MENSAJE PREDEFINIDO
     // -------------------------------------------------------------
     const whatsappButtons = document.querySelectorAll(".btn-whatsapp");
     const defaultMsg = encodeURIComponent("Hola! Estuve viendo el sitio web de DC Analytics y me gustaría conversar sobre una auditoría analítica para mi negocio.");
