@@ -10,10 +10,12 @@ echo Subiendo tus ultimos cambios a internet...
 echo.
 
 cd /d "%~dp0"
-npx vercel --prod
+git add .
+git commit -m "Actualizacion automatica del sitio web"
+git push origin main
 
 echo.
 echo ====================================================================
-echo ¡Tu sitio web ha sido actualizado con exito en internet!
+echo ¡Tu sitio web ha sido sincronizado con GitHub y actualizado en Vercel!
 echo ====================================================================
 pause
