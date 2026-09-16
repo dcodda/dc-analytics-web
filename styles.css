@@ -1,0 +1,685 @@
+/* ==========================================================================
+   DC ANALYTICS - High-End Boutique Data Studio Stylesheet
+   Design Philosophy: Editorial Swiss Grid, Technical Authority, Zero-Clutter
+   ========================================================================== */
+
+:root {
+    --bg-main: #081024;
+    --bg-surface: #0C1733;
+    --bg-surface-elevated: #101F44;
+    --border-subtle: rgba(255, 255, 255, 0.08);
+    --border-strong: rgba(56, 189, 248, 0.25);
+    
+    --accent-sky: #38BDF8;
+    --accent-blue: #3B82F6;
+    --accent-emerald: #10B981;
+    --accent-rose: #F43F5E;
+    
+    --text-primary: #F8FAFC;
+    --text-secondary: #94A3B8;
+    --text-tertiary: #64748B;
+    
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-mono: 'JetBrains Mono', 'Fira Code', 'SF Mono', Consolas, monospace;
+    
+    --transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+}
+
+/* ---------------- LAYOUT BASE ---------------- */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 32px;
+}
+
+.section {
+    padding: 110px 0;
+    border-bottom: 1px solid var(--border-subtle);
+    position: relative;
+}
+
+/* Indicador de sección editorial (ej: 01 // SERVICIOS) */
+.section-index {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--accent-sky);
+    margin-bottom: 16px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.section-index::before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 1px;
+    background-color: var(--accent-sky);
+}
+
+.section-headline {
+    font-size: 34px;
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: -0.6px;
+    line-height: 1.25;
+    margin-bottom: 20px;
+}
+
+.section-subhead {
+    font-size: 17px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    max-width: 700px;
+}
+
+/* ---------------- NAVBAR EDITORIAL ---------------- */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: rgba(8, 16, 36, 0.92);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border-subtle);
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    text-decoration: none;
+}
+
+.nav-logo {
+    width: 115px;
+    height: auto;
+    display: block;
+}
+
+.nav-badge {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    color: var(--accent-sky);
+    background-color: rgba(56, 189, 248, 0.08);
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    padding: 3px 8px;
+    border-radius: 4px;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+    list-style: none;
+}
+
+.nav-menu a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.nav-menu a:hover {
+    color: var(--text-primary);
+}
+
+/* Botones con estilo sutil y sin estridencias */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 11px 22px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: var(--transition);
+    border: 1px solid transparent;
+}
+
+.btn-primary, .nav-menu a.btn-primary {
+    background-color: var(--accent-sky) !important;
+    color: #050E20 !important;
+    font-weight: 700 !important;
+    border-color: var(--accent-sky);
+}
+
+.btn-primary:hover, .nav-menu a.btn-primary:hover {
+    background-color: #0EA5E9 !important;
+    color: #000000 !important;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 14px rgba(56, 189, 248, 0.3);
+}
+
+.btn-ghost {
+    background-color: transparent;
+    color: var(--text-primary);
+    border-color: var(--border-subtle);
+}
+
+.btn-ghost:hover {
+    background-color: var(--bg-surface);
+    border-color: var(--border-strong);
+}
+
+/* ---------------- HERO ASIMÉTRICO ---------------- */
+.hero {
+    padding-top: 170px;
+    padding-bottom: 100px;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.25fr 0.75fr;
+    gap: 60px;
+    align-items: flex-end;
+}
+
+.hero-statement {
+    font-size: 46px;
+    font-weight: 800;
+    color: var(--text-primary);
+    letter-spacing: -1.2px;
+    line-height: 1.15;
+}
+
+.hero-statement span {
+    color: var(--accent-sky);
+    display: block;
+}
+
+.hero-editorial-copy {
+    border-left: 2px solid var(--border-subtle);
+    padding-left: 28px;
+}
+
+.hero-editorial-copy p {
+    font-size: 16px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 28px;
+}
+
+.hero-cta-group {
+    display: flex;
+    gap: 16px;
+}
+
+/* ---------------- MANIFIESTO DEL FUNDADOR ---------------- */
+.manifesto-box {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    padding: 48px;
+}
+
+.manifesto-quote {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--text-primary);
+    line-height: 1.5;
+    margin-bottom: 24px;
+    letter-spacing: -0.3px;
+}
+
+.manifesto-text {
+    font-size: 15px;
+    color: var(--text-secondary);
+    line-height: 1.75;
+    margin-bottom: 28px;
+}
+
+.manifesto-author {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    border-top: 1px solid var(--border-subtle);
+    padding-top: 24px;
+}
+
+.author-role {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.author-tag {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--accent-sky);
+}
+
+/* ---------------- ESQUEMA DE ARQUITECTURA TÉCNICA ---------------- */
+.architecture-flow {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-top: 40px;
+    position: relative;
+}
+
+.arch-node {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: 6px;
+    padding: 24px 20px;
+    position: relative;
+    transition: var(--transition);
+}
+
+.arch-node:hover {
+    border-color: var(--border-strong);
+    background-color: var(--bg-surface-elevated);
+}
+
+.arch-step-num {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--accent-sky);
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.arch-node-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.arch-node-desc {
+    font-size: 12px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+/* ---------------- SERVICIOS EDITORIALES (SIN EMOJIS) ---------------- */
+.editorial-services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    margin-top: 40px;
+}
+
+.editorial-card {
+    border-top: 2px solid var(--border-strong);
+    padding-top: 24px;
+}
+
+.editorial-num {
+    font-family: var(--font-mono);
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--accent-sky);
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+}
+
+.editorial-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 14px;
+    letter-spacing: -0.3px;
+}
+
+.editorial-body {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.deliverables-label {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: var(--text-tertiary);
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.deliverables-list {
+    list-style: none;
+}
+
+.deliverables-list li {
+    font-size: 13px;
+    color: var(--text-primary);
+    padding: 6px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.deliverables-list li::before {
+    content: "—";
+    color: var(--accent-sky);
+    font-weight: bold;
+}
+
+/* ---------------- TABLA COMPARATIVA: TRADICIONAL VS DC ANALYTICS ---------------- */
+.comparison-container {
+    margin-top: 40px;
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.comparison-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.comp-col {
+    padding: 36px 32px;
+}
+
+.comp-col.traditional {
+    background-color: #070E20;
+    border-right: 1px solid var(--border-subtle);
+}
+
+.comp-col.dc {
+    background-color: var(--bg-surface);
+    border-left: 1px solid var(--border-strong);
+}
+
+.comp-badge {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    display: inline-block;
+}
+
+.comp-col.traditional .comp-badge {
+    color: var(--text-tertiary);
+}
+
+.comp-col.dc .comp-badge {
+    color: var(--accent-sky);
+}
+
+.comp-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    color: var(--text-primary);
+}
+
+.comp-list {
+    list-style: none;
+}
+
+.comp-list li {
+    font-size: 14px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border-subtle);
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    line-height: 1.5;
+}
+
+.comp-list li:last-child {
+    border-bottom: none;
+}
+
+.icon-cross {
+    color: var(--accent-rose);
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.icon-check {
+    color: var(--accent-emerald);
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/* ---------------- CASO DE ESTUDIO SHOWCASE ---------------- */
+.case-panel {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    padding: 44px;
+    margin-top: 40px;
+}
+
+.case-split {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 48px;
+    align-items: center;
+}
+
+.case-headline {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 16px;
+    letter-spacing: -0.4px;
+}
+
+.case-context {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 24px;
+}
+
+.stat-pills {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.pill-metric {
+    background-color: var(--bg-main);
+    border: 1px solid var(--border-subtle);
+    border-radius: 4px;
+    padding: 12px;
+}
+
+.pill-metric .num {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--accent-sky);
+    font-family: var(--font-mono);
+}
+
+.pill-metric .lbl {
+    font-size: 11px;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Calculadora Interactiva */
+.calc-card {
+    background-color: var(--bg-main);
+    border: 1px solid var(--border-strong);
+    border-radius: 6px;
+    padding: 28px;
+}
+
+.calc-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.calc-caption {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+}
+
+.calc-slider-wrap {
+    margin-bottom: 20px;
+}
+
+.calc-header-flex {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+}
+
+.range-input {
+    width: 100%;
+    -webkit-appearance: none;
+    height: 4px;
+    background: var(--border-subtle);
+    border-radius: 2px;
+    outline: none;
+}
+
+.range-input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--accent-sky);
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
+}
+
+.calc-display {
+    background-color: rgba(56, 189, 248, 0.06);
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    border-radius: 4px;
+    padding: 16px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.calc-display-amount {
+    font-size: 28px;
+    font-weight: 800;
+    font-family: var(--font-mono);
+    color: var(--text-primary);
+}
+
+.calc-display-sub {
+    font-size: 11px;
+    color: var(--accent-sky);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 2px;
+}
+
+/* ---------------- CTA FINAL DE AUTOR ---------------- */
+.contact-block {
+    text-align: center;
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.contact-headline {
+    font-size: 36px;
+    font-weight: 800;
+    letter-spacing: -0.8px;
+    margin-bottom: 16px;
+}
+
+.contact-subtext {
+    font-size: 16px;
+    color: var(--text-secondary);
+    margin-bottom: 36px;
+    line-height: 1.6;
+}
+
+.contact-button-row {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+/* ---------------- FOOTER ---------------- */
+.footer {
+    padding: 36px 0;
+    border-top: 1px solid var(--border-subtle);
+    font-size: 12px;
+    color: var(--text-tertiary);
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width: 900px) {
+    .hero-grid,
+    .case-split,
+    .comparison-grid,
+    .editorial-services-grid,
+    .architecture-flow {
+        grid-template-columns: 1fr;
+    }
+    .hero-statement {
+        font-size: 32px;
+    }
+    .nav-menu {
+        display: none;
+    }
+    .footer .container {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+    }
+}
