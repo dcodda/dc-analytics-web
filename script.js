@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
     whatsappButtons.forEach(btn => {
         btn.addEventListener("click", (e) => {
             e.preventDefault();
-            const phone = (btn.getAttribute("data-phone") || "5491100000000").replace(/[^0-9]/g, "");
+            const phone = (btn.getAttribute("data-phone") || "5493704325018").replace(/[^0-9]/g, "");
             window.open(`https://wa.me/${phone}?text=${defaultMsg}`, "_blank", "noopener,noreferrer");
         });
     });
