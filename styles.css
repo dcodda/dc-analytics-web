@@ -870,3 +870,62 @@ body {
         text-align: center;
     }
 }
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 20px;
+    }
+
+    .section {
+        padding: 70px 0;
+    }
+
+    /* Caso de Éxito en Móvil */
+    .case-panel {
+        padding: 24px 20px;
+    }
+
+    .case-headline {
+        font-size: 25px;
+        line-height: 1.25;
+        margin-bottom: 14px;
+    }
+
+    .case-context {
+        font-size: 13.5px;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+
+    /* Métricas horizontales a 1 columna */
+    .stat-pills {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin-bottom: 20px;
+    }
+
+    .pill-metric {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 20px;
+        padding: 16px 20px;
+        border: 1px solid var(--border-subtle);
+        border-radius: 6px;
+        text-align: left;
+    }
+
+    .pill-metric .num {
+        font-size: 28px;
+        min-width: 100px;
+        line-height: 1;
+        flex-shrink: 0;
+    }
+
+    .pill-metric .lbl {
+        font-size: 12px;
+        letter-spacing: 0.6px;
+        line-height: 1.4;
+        white-space: normal;
+    }
+}
