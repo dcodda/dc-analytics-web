@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // 3. ENLACE DIRECTO DE WHATSAPP CON MENSAJE PREDEFINIDO
     // -------------------------------------------------------------
     const whatsappButtons = document.querySelectorAll(".btn-whatsapp");
-    const defaultMsg = encodeURIComponent("Hola! Estuve viendo el sitio web de DC Analytics y me gustaría conversar sobre una auditoría analítica para mi negocio.");
+    const defaultMsg = encodeURIComponent("Hola! Estuve viendo el sitio web de DC Analytics y me gustaría consultar sobre una aplicación a medida o control de gestión para mi negocio.");
 
     whatsappButtons.forEach(btn => {
         btn.addEventListener("click", (e) => {
