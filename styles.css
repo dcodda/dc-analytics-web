@@ -38,8 +38,8 @@ h1,h2,h3{font-family:var(--serif);font-weight:500;letter-spacing:-.015em;line-he
 .hero h1 em{font-style:italic;color:var(--rose)}
 .hero p.lead{margin-top:20px;font-size:18px;color:var(--soft);max-width:30em}
 .hero-ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
-.stats{display:grid;grid-template-columns:repeat(3,auto);gap:36px;margin-top:40px;justify-content:start}
-.stats b{display:block;font-family:var(--serif);font-size:28px;font-weight:500}
+.stats{display:grid;grid-template-columns:repeat(3,auto);gap:clamp(18px,2.6vw,36px);margin-top:40px;justify-content:start}
+.stats b{display:block;font-family:var(--serif);font-size:28px;font-weight:500;white-space:nowrap}
 .stats span{font-size:13px;color:var(--soft)}
 
 /* Laptop mockup */
