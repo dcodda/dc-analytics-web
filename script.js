@@ -1,9 +1,17 @@
+function otroRubro(sel){
+  var w = document.getElementById("otro-wrap");
+  w.hidden = sel.value !== "Otro";
+  if (!w.hidden) w.querySelector("input").focus();
+}
+
 function enviar(e){
   e.preventDefault();
-  var f = e.target, t =
+  var f = e.target;
+  var rubro = f.rubro.value === "Otro" ? (f.rubroOtro.value || "Otro") : (f.rubro.value || "Sin especificar");
+  var t =
     "Hola Daniel, quiero pedir el diagnóstico gratis.\n" +
     "Nombre: " + f.nombre.value + "\nComercio: " + f.comercio.value +
-    "\nRubro: " + f.rubro.value + "\nHoy controlo con: " + f.hoy.value +
+    "\nRubro: " + rubro + "\nHoy controlo con: " + f.hoy.value +
     (f.msg.value ? "\nQuiero resolver: " + f.msg.value : "");
   window.open("https://wa.me/5493704325018?text=" + encodeURIComponent(t), "_blank", "noopener");
   return false;

@@ -186,3 +186,4 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
   .cta-box .tx{padding:32px 22px}
   .nav .btn{display:none}
 }
+[hidden]{display:none!important}

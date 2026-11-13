@@ -187,8 +187,33 @@
         <label>Nombre<input name="nombre" required autocomplete="name"></label>
         <label>Comercio<input name="comercio" required></label>
         <label>Rubro
-          <select name="rubro"><option>Ferretería / corralón</option><option>Distribuidora</option><option>Autopartes</option><option>Almacén / autoservicio</option><option>Otro</option></select>
+          <select name="rubro" onchange="otroRubro(this)">
+            <option value="" disabled selected>Elegí una opción</option>
+            <optgroup label="Comercio">
+              <option>Almacén / autoservicio / kiosco</option>
+              <option>Ropa / calzado / accesorios</option>
+              <option>Ferretería / corralón / materiales</option>
+              <option>Electrónica / celulares / computación</option>
+              <option>Farmacia / perfumería</option>
+              <option>Librería / juguetería / regalería</option>
+              <option>Mueblería / bazar / hogar</option>
+              <option>Autopartes / repuestos / motos</option>
+              <option>Veterinaria / pet shop / agro</option>
+            </optgroup>
+            <optgroup label="Gastronomía">
+              <option>Cafetería / bar</option>
+              <option>Restaurante / rotisería / delivery</option>
+              <option>Panadería / pastelería</option>
+            </optgroup>
+            <optgroup label="Mayorista y servicios">
+              <option>Distribuidora / mayorista</option>
+              <option>Taller / servicio técnico</option>
+              <option>Gimnasio / estética / salud</option>
+            </optgroup>
+            <option value="Otro">Otro</option>
+          </select>
         </label>
+        <label class="full" id="otro-wrap" hidden>¿Cuál es tu rubro?<input name="rubroOtro" placeholder="Ej: óptica, vivero, imprenta…"></label>
         <label>Cómo controlás hoy
           <select name="hoy"><option>Excel</option><option>Cuaderno</option><option>Un sistema</option><option>No lo controlo</option></select>
         </label>
