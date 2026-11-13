@@ -17,6 +17,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
 
@@ -53,16 +54,16 @@
             <div class="main">
               <h4>Resumen · Noviembre</h4>
               <div class="k">
-                <div><small>Ventas</small><strong>$18,4 M</strong> <i class="g">+12%</i></div>
-                <div><small>Margen real</small><strong>23,7%</strong> <i class="r">−2,1</i></div>
-                <div><small>Para reponer</small><strong>14</strong> <i style="color:var(--gold)">productos</i></div>
+                <div><small>Ventas</small><strong data-to="18.4" data-dec="1" data-pre="$" data-suf=" M">$18,4 M</strong> <i class="g">+12%</i></div>
+                <div><small>Margen real</small><strong data-to="23.7" data-dec="1" data-suf="%">23,7%</strong> <i class="r">−2,1</i></div>
+                <div><small>Para reponer</small><strong data-to="14">14</strong> <i style="color:var(--gold)">productos</i></div>
               </div>
               <div class="chart">
                 <svg viewBox="0 0 300 70" width="100%" height="70" preserveAspectRatio="none" aria-hidden="true">
                   <defs><linearGradient id="ga" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#9C7F86" stop-opacity=".35"/><stop offset="1" stop-color="#9C7F86" stop-opacity="0"/></linearGradient></defs>
-                  <path d="M0 52 C25 44 40 48 60 40 S100 30 120 36 160 22 180 26 220 14 240 20 280 8 300 10 V70 H0Z" fill="url(#ga)"/>
-                  <path d="M0 52 C25 44 40 48 60 40 S100 30 120 36 160 22 180 26 220 14 240 20 280 8 300 10" fill="none" stroke="#9C7F86" stroke-width="2"/>
-                  <path d="M0 60 C40 56 70 58 100 52 S160 50 200 44 260 42 300 36" fill="none" stroke="#13213D" stroke-width="1.5" stroke-dasharray="4 4" opacity=".5"/>
+                  <path class="h-area" d="M0 52 C25 44 40 48 60 40 S100 30 120 36 160 22 180 26 220 14 240 20 280 8 300 10 V70 H0Z" fill="url(#ga)"/>
+                  <path class="draw h-line" pathLength="1" d="M0 52 C25 44 40 48 60 40 S100 30 120 36 160 22 180 26 220 14 240 20 280 8 300 10" fill="none" stroke="#9C7F86" stroke-width="2"/>
+                  <path d="M0 60 C40 56 70 58 100 52 S160 50 200 44 260 42 300 36" fill="none" stroke="#13213D" stroke-width="1.5" stroke-dasharray="4 4" opacity=".5" class="h-dash"/>
                 </svg>
               </div>
               <div class="tbl">
@@ -95,13 +96,13 @@
       <p>Sirve para casi cualquier negocio que compra y vende. No es un programa enlatado: parto de una base probada y la adapto a tus productos, proveedores y forma de vender.</p>
     </div>
     <div class="rubros">
-      <article class="rubro"><div class="ph"><img src="assets/fotos/almacen.jpg" alt="Estantes de un almacén con paquetes de yerba mate" loading="lazy" width="960" height="720"><span class="badge"><svg class="ico" viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/></svg></span></div>
+      <article class="rubro"><div class="ph"><span class="ph-img"><img src="assets/fotos/almacen.jpg" alt="Estantes de un almacén con paquetes de yerba mate" loading="lazy" width="960" height="720"></span><span class="badge"><svg class="ico" viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/></svg></span></div>
         <div class="tx"><h3>Almacenes y kioscos</h3><p>Mucho volumen y precios que hay que mover seguido.</p></div></article>
-      <article class="rubro"><div class="ph"><img src="assets/fotos/ropa.jpg" alt="Perchero con remeras y jeans en una tienda de ropa" loading="lazy" width="960" height="720"><span class="badge"><svg class="ico" viewBox="0 0 24 24"><path d="M20.4 3.5 16 2a4 4 0 0 1-8 0L3.6 3.5a2 2 0 0 0-1.3 2.2l.6 3.5a1 1 0 0 0 1 .8H6v10a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V10h2.1a1 1 0 0 0 1-.8l.6-3.5a2 2 0 0 0-1.3-2.2Z"/></svg></span></div>
+      <article class="rubro"><div class="ph"><span class="ph-img"><img src="assets/fotos/ropa.jpg" alt="Perchero con remeras y jeans en una tienda de ropa" loading="lazy" width="960" height="720"></span><span class="badge"><svg class="ico" viewBox="0 0 24 24"><path d="M20.4 3.5 16 2a4 4 0 0 1-8 0L3.6 3.5a2 2 0 0 0-1.3 2.2l.6 3.5a1 1 0 0 0 1 .8H6v10a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V10h2.1a1 1 0 0 0 1-.8l.6-3.5a2 2 0 0 0-1.3-2.2Z"/></svg></span></div>
         <div class="tx"><h3>Ropa y calzado</h3><p>Talles, colores y temporadas: qué se vende y qué queda colgado.</p></div></article>
-      <article class="rubro"><div class="ph"><img src="assets/fotos/gastronomia.jpg" alt="Barra de una cafetería con máquina de café y vitrina de medialunas" loading="lazy" width="960" height="720"><span class="badge"><svg class="ico" viewBox="0 0 24 24"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><path d="M6 2v2M10 2v2M14 2v2"/></svg></span></div>
+      <article class="rubro"><div class="ph"><span class="ph-img"><img src="assets/fotos/gastronomia.jpg" alt="Barra de una cafetería con máquina de café y vitrina de medialunas" loading="lazy" width="960" height="720"></span><span class="badge"><svg class="ico" viewBox="0 0 24 24"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><path d="M6 2v2M10 2v2M14 2v2"/></svg></span></div>
         <div class="tx"><h3>Gastronomía</h3><p>Cafeterías, bares y panaderías: el costo real de cada producto.</p></div></article>
-      <article class="rubro"><div class="ph"><img src="assets/fotos/deposito.jpg" alt="Depósito con estanterías, cajas y pallets" loading="lazy" width="960" height="720"><span class="badge"><svg class="ico" viewBox="0 0 24 24"><path d="M1 3h15v13H1zM16 8h4l3 3v5h-7"/><circle cx="5.5" cy="18.5" r="2"/><circle cx="18.5" cy="18.5" r="2"/></svg></span></div>
+      <article class="rubro"><div class="ph"><span class="ph-img"><img src="assets/fotos/deposito.jpg" alt="Depósito con estanterías, cajas y pallets" loading="lazy" width="960" height="720"></span><span class="badge"><svg class="ico" viewBox="0 0 24 24"><path d="M1 3h15v13H1zM16 8h4l3 3v5h-7"/><circle cx="5.5" cy="18.5" r="2"/><circle cx="18.5" cy="18.5" r="2"/></svg></span></div>
         <div class="tx"><h3>Distribuidoras y mayoristas</h3><p>Stock en depósito, márgenes finos y listas que cambian seguido.</p></div></article>
     </div>
     <p class="more">¿Tu rubro no está? También trabajo con ferreterías, farmacias, autopartes, talleres y más. <a href="#contacto">Consultame</a>.</p>
@@ -117,16 +118,16 @@
       <div class="panel-body">
         <svg viewBox="0 0 320 150" width="100%" aria-hidden="true">
           <g stroke="#EEE7E0"><line x1="0" y1="30" x2="320" y2="30"/><line x1="0" y1="70" x2="320" y2="70"/><line x1="0" y1="110" x2="320" y2="110"/></g>
-          <path d="M0 120 C30 112 50 100 80 104 S130 80 160 84 210 60 240 66 290 40 320 34" fill="none" stroke="#13213D" stroke-width="2.4"/>
-          <path d="M0 132 C40 128 70 124 100 120 S170 112 210 104 280 96 320 92" fill="none" stroke="#B98A3E" stroke-width="2" stroke-dasharray="5 5"/>
-          <circle cx="240" cy="66" r="5" fill="#13213D" stroke="#fff" stroke-width="2"/>
+          <path class="draw" pathLength="1" d="M0 120 C30 112 50 100 80 104 S130 80 160 84 210 60 240 66 290 40 320 34" fill="none" stroke="#13213D" stroke-width="2.4"/>
+          <path d="M0 132 C40 128 70 124 100 120 S170 112 210 104 280 96 320 92" fill="none" stroke="#B98A3E" stroke-width="2" stroke-dasharray="5 5" class="v-dash"/>
+          <circle class="v-dot" cx="240" cy="66" r="5" fill="#13213D" stroke="#fff" stroke-width="2"/>
         </svg>
         <div>
           <svg viewBox="0 0 42 42" width="120" style="display:block;margin:0 auto 12px" aria-hidden="true">
             <circle cx="21" cy="21" r="15.9" fill="none" stroke="#EDE4DC" stroke-width="6"/>
-            <circle cx="21" cy="21" r="15.9" fill="none" stroke="#13213D" stroke-width="6" stroke-dasharray="42 58" stroke-dashoffset="25"/>
-            <circle cx="21" cy="21" r="15.9" fill="none" stroke="#9C7F86" stroke-width="6" stroke-dasharray="28 72" stroke-dashoffset="-17"/>
-            <circle cx="21" cy="21" r="15.9" fill="none" stroke="#B98A3E" stroke-width="6" stroke-dasharray="18 82" stroke-dashoffset="-45"/>
+            <circle cx="21" cy="21" r="15.9" fill="none" stroke="#13213D" stroke-width="6" stroke-dashoffset="25" class="seg" style="--seg:42 58"/>
+            <circle cx="21" cy="21" r="15.9" fill="none" stroke="#9C7F86" stroke-width="6" stroke-dashoffset="-17" class="seg" style="--seg:28 72"/>
+            <circle cx="21" cy="21" r="15.9" fill="none" stroke="#B98A3E" stroke-width="6" stroke-dashoffset="-45" class="seg" style="--seg:18 82"/>
           </svg>
           <div class="legend">
             <div><i style="background:#13213D"></i>Construcción<b>42%</b></div>
