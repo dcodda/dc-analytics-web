@@ -174,8 +174,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 @media (max-width:600px){
   section{padding:64px 0}
   .hero{padding-top:36px}
-  .stats{gap:22px;grid-template-columns:repeat(3,1fr)}
-  .stats b{font-size:22px}
+  .stats{gap:16px;grid-template-columns:.8fr .7fr 1.3fr}
+  .stats b{font-size:21px;white-space:nowrap}
   .strip,.rubros{grid-template-columns:1fr}
   .strip div+div{border-left:0;border-top:1px solid var(--line)}
   .app{grid-template-columns:1fr}.side{display:none}
