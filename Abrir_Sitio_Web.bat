@@ -1,3 +1,0 @@
-@echo off
-title Abriendo Sitio Web de DC Analytics...
-start "" "%~dp0index.html"

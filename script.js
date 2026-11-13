@@ -1,89 +1,38 @@
-"use strict";
+(function () {
+  // Todos los botones de contacto abren WhatsApp con un mensaje listo
+  var WA_NUMBER = "5493704325018";
+  var WA_TEXT = "Hola Daniel, vi la web de DC Analytics y me interesa el diagnóstico gratis para mi negocio.";
+  var waUrl = "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(WA_TEXT);
+  document.querySelectorAll("[data-wa]").forEach(function (a) {
+    a.href = waUrl;
+    a.target = "_blank";
+    a.rel = "noopener";
+  });
 
-document.addEventListener("DOMContentLoaded", () => {
-    // -------------------------------------------------------------
-    // 1. CALCULADORA INTERACTIVA DE ROI (Segura: uso de textContent)
-    // -------------------------------------------------------------
-    const slider = document.getElementById("churnSlider");
-    const sliderVal = document.getElementById("sliderVal");
-    const resultDisplay = document.getElementById("roiResult");
+  // Animación de barras escalonada
+  document.querySelectorAll(".bars span").forEach(function (s, i) {
+    s.style.setProperty("--i", i);
+  });
 
-    // Base de cálculo del caso de estudio: ~$480,000 USD en facturación vulnerable
-    const BASE_VULNERABLE_REVENUE = 480000;
+  // Borde del nav al hacer scroll
+  var nav = document.getElementById("nav");
+  var onScroll = function () { nav.classList.toggle("scrolled", window.scrollY > 8); };
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
 
-    if (slider && sliderVal && resultDisplay) {
-        slider.addEventListener("input", (e) => {
-            const pct = parseInt(e.target.value, 10);
-            if (isNaN(pct) || pct < 0 || pct > 100) return;
-            sliderVal.textContent = `${pct}%`;
-            
-            const recovered = BASE_VULNERABLE_REVENUE * (pct / 100);
-            resultDisplay.textContent = `$${recovered.toLocaleString('en-US', { maximumFractionDigits: 0 })} USD`;
-        });
-    }
+  // Aparición de secciones
+  var items = document.querySelectorAll(".reveal");
+  if ("IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add("visible"); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+    items.forEach(function (el) { io.observe(el); });
+  } else {
+    items.forEach(function (el) { el.classList.add("visible"); });
+  }
 
-    // -------------------------------------------------------------
-    // 2. NAVBAR INTELIGENTE FLUIDA (Ocultar al bajar, mostrar al subir)
-    // -------------------------------------------------------------
-    const navbar = document.querySelector(".navbar");
-    let lastScrollY = window.scrollY;
-    let isTicking = false;
-
-    window.addEventListener("scroll", () => {
-        if (!isTicking) {
-            window.requestAnimationFrame(() => {
-                const currentScrollY = window.scrollY;
-
-                // Siempre visible al inicio de la página
-                if (currentScrollY <= 30) {
-                    navbar.classList.remove("nav-hidden");
-                } else if (currentScrollY > lastScrollY && currentScrollY > 100) {
-                    // Scrolleando hacia abajo: ocultar suavemente
-                    navbar.classList.add("nav-hidden");
-                } else if (currentScrollY < lastScrollY) {
-                    // Scrolleando hacia arriba: reaparecer fluidamente
-                    navbar.classList.remove("nav-hidden");
-                }
-
-                lastScrollY = currentScrollY;
-                isTicking = false;
-            });
-            isTicking = true;
-        }
-    }, { passive: true });
-
-    // -------------------------------------------------------------
-    // 3. ENLACE DIRECTO DE WHATSAPP CON MENSAJE PREDEFINIDO
-    // -------------------------------------------------------------
-    const whatsappButtons = document.querySelectorAll(".btn-whatsapp");
-    const defaultMsg = encodeURIComponent("Hola! Estuve viendo el sitio web de DC Analytics y me gustaría consultar sobre una aplicación a medida o control de gestión para mi negocio.");
-
-    whatsappButtons.forEach(btn => {
-        btn.addEventListener("click", (e) => {
-            e.preventDefault();
-            const phone = (btn.getAttribute("data-phone") || "5493704325018").replace(/[^0-9]/g, "");
-            window.open(`https://wa.me/${phone}?text=${defaultMsg}`, "_blank", "noopener,noreferrer");
-        });
-    });
-
-    // -------------------------------------------------------------
-    // 4. MOTOR DE ANIMACIÓN: SCROLL REVEAL (INTERSECTION OBSERVER)
-    // -------------------------------------------------------------
-    const revealElements = document.querySelectorAll('.reveal');
-    const revealOptions = {
-        threshold: 0.15,
-        rootMargin: "0px 0px -50px 0px"
-    };
-
-    const revealOnScroll = new IntersectionObserver(function(entries, observer) {
-        entries.forEach(entry => {
-            if (!entry.isIntersecting) return;
-            entry.target.classList.add('active');
-            observer.unobserve(entry.target); // Optimización de rendimiento
-        });
-    }, revealOptions);
-
-    revealElements.forEach(el => revealOnScroll.observe(el));
-
-    console.log("DC Analytics Website Initialized Securely.");
-});
+  var y = document.getElementById("year");
+  if (y) y.textContent = new Date().getFullYear();
+})();

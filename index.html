@@ -1,398 +1,220 @@
-<!DOCTYPE html>
-<html lang="es">
+<!doctype html>
+<html lang="es-AR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DC Analytics | Software a Medida & Control de Gestión para Empresas</title>
-    <meta name="description" content="Desarrollamos aplicaciones personalizadas y tableros de control para comercios y empresas. Control de stock en tiempo real, registro ágil de ventas y auditoría de rentabilidad.">
-    <link rel="icon" type="image/jpeg" href="assets/logo.jpg">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DC Analytics · Stock y rentabilidad para comercios de Formosa</title>
+  <meta name="description" content="Sistemas de stock, ventas y rentabilidad hechos a medida para comercios y distribuidoras de Formosa. Sabé cuánto ganás de verdad en cada producto.">
+  <meta name="theme-color" content="#09152D">
+  <meta property="og:title" content="DC Analytics · Sabé cuánto ganás de verdad">
+  <meta property="og:description" content="Stock, ventas y rentabilidad a medida para comercios y distribuidoras de Formosa.">
+  <meta property="og:image" content="assets/logo.jpg">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
 
-    <!-- NAVBAR INTELIGENTE FLUIDA -->
-    <nav class="navbar">
-        <div class="container">
-            <a href="#" class="nav-brand">
-                <img src="assets/logo.jpg" alt="DC Analytics" class="nav-logo">
-                <div class="nav-brand-text">
-                    <span class="nav-brand-name">DC ANALYTICS</span>
-                    <span class="nav-badge">Sistemas & Control</span>
-                </div>
+  <header class="nav" id="nav">
+    <div class="container nav-inner">
+      <a href="#inicio" class="brand" aria-label="DC Analytics, inicio">
+        <img src="assets/logo-mark.png" alt="" width="44" height="33">
+        <span>DC Analytics</span>
+      </a>
+      <nav class="nav-links" aria-label="Secciones">
+        <a href="#problema">El problema</a>
+        <a href="#solucion">Qué hacemos</a>
+        <a href="#como">Cómo trabajamos</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <a class="btn btn-sm btn-primary nav-cta" data-wa href="#contacto">Hablemos</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Comercios y distribuidoras de Formosa</p>
+          <h1>Sabé cuánto ganás <span class="accent">de verdad</span> en cada producto.</h1>
+          <p class="lead">Armamos sistemas de stock, ventas y rentabilidad <strong>a la medida de tu negocio</strong>, para que dejes de vender perdiendo plata cuando los costos suben.</p>
+          <div class="hero-ctas">
+            <a class="btn btn-primary" data-wa href="#contacto">
+              <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3a.5.5 0 0 0 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.1 5.1 0 0 0 1.1 2.7 11.7 11.7 0 0 0 4.5 4c1.7.7 2.3.8 3.2.7a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.4-.3Z"/></svg>
+              Pedí un diagnóstico gratis
             </a>
-            <ul class="nav-menu">
-                <li><a href="#problemas">¿Qué Resolvemos?</a></li>
-                <li><a href="#proceso">Cómo Trabajamos</a></li>
-                <li><a href="#soluciones">Soluciones</a></li>
-                <li><a href="#comparativa">Por qué DC</a></li>
-                <li><a href="#caso-estudio">Caso Real</a></li>
-                <li><a href="#contacto" class="btn btn-primary">Iniciar Conversación</a></li>
-            </ul>
+            <a class="btn btn-ghost" href="#solucion">Ver qué hace</a>
+          </div>
+          <ul class="hero-points">
+            <li>Te visitamos en tu negocio</li>
+            <li>Se usa desde la PC o el celular</li>
+            <li>Soporte local, en Formosa</li>
+          </ul>
         </div>
-    </nav>
 
-    <!-- HERO CON PREVIEW VISUAL -->
-    <header class="hero">
-        <div class="container">
-            <div class="hero-grid">
-                <div>
-                    <div class="section-index">DC ANALYTICS // SOFTWARE A MEDIDA & GESTIÓN COMERCIAL</div>
-                    <h1 class="hero-statement">
-                        Control total de ventas, stock y rentabilidad <span>para tu empresa o negocio.</span>
-                    </h1>
-                    <div class="hero-editorial-copy">
-                        <p>
-                            Desarrollamos aplicaciones personalizadas y tableros a medida para que registres tus ventas diarias, controles tu stock en tiempo real y sepas exactamente cuánto ganas a fin de mes. Sin planillas caóticas ni complicaciones técnicas.
-                        </p>
-                        <div class="hero-cta-group">
-                            <a href="#caso-estudio" class="btn btn-ghost">Ver Demostración en Vivo</a>
-                            <a href="#contacto" class="btn btn-primary">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: block;">
-                                    <path d="M19.05 4.91C17.18 3.03 14.69 2 12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91ZM12.04 20.15C10.56 20.15 9.11 19.76 7.85 19.01L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.8 13.47 3.8 11.91C3.8 7.37 7.5 3.67 12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15ZM16.56 14.39C16.31 14.26 15.09 13.66 14.86 13.58C14.64 13.5 14.47 13.46 14.3 13.71C14.13 13.96 13.65 14.53 13.5 14.7C13.36 14.87 13.21 14.89 12.96 14.76C12.71 14.64 11.91 14.38 10.96 13.53C10.22 12.87 9.72 12.06 9.58 11.81C9.43 11.56 9.56 11.43 9.69 11.3C9.8 11.19 9.94 11.01 10.06 10.86C10.19 10.72 10.23 10.61 10.31 10.45C10.39 10.28 10.35 10.14 10.29 10.01C10.23 9.89 9.73 8.67 9.53 8.17C9.33 7.68 9.12 7.75 8.97 7.74C8.83 7.73 8.66 7.73 8.49 7.73C8.32 7.73 8.05 7.79 7.82 8.04C7.59 8.29 6.95 8.89 6.95 10.11C6.95 11.33 7.84 12.5 7.96 12.67C8.09 12.83 9.71 15.33 12.19 16.4C12.78 16.66 13.24 16.81 13.6 16.92C14.2 17.11 14.74 17.08 15.17 17.02C15.65 16.95 16.65 16.41 16.86 15.82C17.07 15.24 17.07 14.74 17.01 14.64C16.95 14.53 16.81 14.47 16.56 14.39Z" fill="#050E20"/>
-                                </svg>
-                                <span>Agendar Consulta</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Showcase Visual en Hero -->
-                <div class="hero-visual-card">
-                    <div class="hero-visual-header">
-                        <span class="hero-live-badge">
-                            <span class="hero-live-dot"></span> Panel de Control en Vivo
-                        </span>
-                        <span class="nav-badge">Estado del Negocio</span>
-                    </div>
-                    <img src="assets/dashboard_preview.jpg" alt="Vista previa del Dashboard DC Analytics" class="hero-visual-img">
-                    <div class="hero-visual-stats">
-                        <div class="hero-mini-stat">
-                            <div class="val">+18.5%</div>
-                            <div class="lbl">Margen Operativo</div>
-                        </div>
-                        <div class="hero-mini-stat">
-                            <div class="val">100%</div>
-                            <div class="lbl">Control de Stock</div>
-                        </div>
-                    </div>
-                </div>
+        <!-- Mockup ilustrativo -->
+        <div class="mock reveal" aria-label="Vista de ejemplo del sistema, con datos ficticios" role="img">
+          <div class="mock-bar"><span></span><span></span><span></span><em>Panel de rentabilidad · Noviembre</em></div>
+          <div class="mock-body">
+            <div class="kpis">
+              <div class="kpi"><small>Ventas del mes</small><b>$ 18,4 M</b><i class="up">+12 %</i></div>
+              <div class="kpi"><small>Margen real</small><b>23,7 %</b><i class="down">−2,1 pts</i></div>
+              <div class="kpi"><small>Stock inmovilizado</small><b>$ 3,1 M</b><i class="warn">41 productos</i></div>
             </div>
-        </div>
-    </header>
-
-    <!-- SECCIÓN 01: PROBLEMAS QUE RESOLVEMOS -->
-    <section class="section" id="problemas">
-        <div class="container">
-            <div class="section-index">01 // IMPACTO EN TU NEGOCIO</div>
-            <h2 class="section-headline reveal">Tres problemas costosos que solucionamos en tu día a día.</h2>
-            <p class="section-subhead reveal">La mayoría de los negocios pierden dinero por falta de control en el stock, márgenes mal calculados y planillas que nadie actualiza.</p>
-
-            <div class="problem-grid">
-                <!-- Problema 01 -->
-                <div class="problem-card reveal">
-                    <span class="problem-badge">01 / CONTROL DE STOCK</span>
-                    <h3 class="problem-title">El desorden del stock y la mercadería parada</h3>
-                    <p class="problem-desc">
-                        Plata inmovilizada en el depósito perdiendo valor frente a la inflación, mientras te quedas sin mercadería de los productos que más se venden. Te damos visibilidad exacta de qué rota, qué está clavado y cuándo reponer.
-                    </p>
-                </div>
-
-                <!-- Problema 02 -->
-                <div class="problem-card reveal">
-                    <span class="problem-badge">02 / MARGEN REAL</span>
-                    <h3 class="problem-title">Vender mucho sin saber cuánto te queda en el bolsillo</h3>
-                    <p class="problem-desc">
-                        Facturar no es lo mismo que ganar. Descuentos sin control, fletes y costos imprevistos devoran la ganancia real. Te mostramos el margen neto exacto por cada producto, cliente y vendedor para que cuides tu caja.
-                    </p>
-                </div>
-
-                <!-- Problema 03 -->
-                <div class="problem-card reveal">
-                    <span class="problem-badge">03 / ORDEN OPERATIVO</span>
-                    <h3 class="problem-title">El infierno de planillas de Excel y cuadernos</h3>
-                    <p class="problem-desc">
-                        Basta de perder horas anotando en hojas sueltas o planillas que se rompen y nadie actualiza. Centralizamos tus ventas, cobros y stock en una herramienta simple que cualquier empleado puede usar sin equivocarse.
-                    </p>
-                </div>
+            <div class="mock-chart" aria-hidden="true">
+              <div class="bars">
+                <span style="--h:46%"></span><span style="--h:58%"></span><span style="--h:52%"></span><span style="--h:66%"></span><span style="--h:61%"></span><span style="--h:74%"></span><span style="--h:70%"></span><span style="--h:82%"></span>
+              </div>
             </div>
+            <div class="alerts">
+              <div class="alert a-red"><b>Precio atrasado</b> Cemento 50 kg · se vende 4 % por debajo del costo nuevo</div>
+              <div class="alert a-amber"><b>Reponer</b> Tornillo 8×1" · quedan 2 cajas, rinde 3 días</div>
+            </div>
+          </div>
+          <p class="mock-note">Vista de ejemplo con datos ficticios</p>
         </div>
+      </div>
     </section>
 
-    <!-- SECCIÓN 02: CÓMO TRABAJAMOS -->
-    <section class="section" id="proceso">
-        <div class="container">
-            <div class="section-index">02 // CÓMO TRABAJAMOS</div>
-            <h2 class="section-headline reveal">De la desorganización al control total en 4 pasos simples.</h2>
-            <p class="section-subhead reveal">Un proceso práctico, rápido y sin fricciones, pensado para el ritmo real de tu comercio o empresa.</p>
-
-            <div class="architecture-flow">
-                <div class="arch-node reveal">
-                    <div class="arch-step-num">PASO 01</div>
-                    <div class="arch-node-title">Diagnóstico del Circuito</div>
-                    <div class="arch-node-desc">Relevamos cómo vendes hoy, cómo controlas el stock y qué herramientas usas (Excel, cuadernos o sistemas viejos) para detectar los cuellos de botella.</div>
-                </div>
-                <div class="arch-node reveal">
-                    <div class="arch-step-num">PASO 02</div>
-                    <div class="arch-node-title">Diseño de tu Solución</div>
-                    <div class="arch-node-desc">Desarrollamos tu aplicación personalizada a medida o nos conectamos a tus planillas y sistemas actuales sin interrumpir tu trabajo diario.</div>
-                </div>
-                <div class="arch-node reveal">
-                    <div class="arch-step-num">PASO 03</div>
-                    <div class="arch-node-title">Carga Ágil y Control Diario</div>
-                    <div class="arch-node-desc">Tu equipo registra ventas, cobros y movimientos de stock en segundos desde el celular o la computadora, de forma intuitiva y sin errores.</div>
-                </div>
-                <div class="arch-node reveal">
-                    <div class="arch-step-num">PASO 04</div>
-                    <div class="arch-node-title">Tablero de Control en Vivo</div>
-                    <div class="arch-node-desc">Accedes en tiempo real a tus ventas del día, productos más rentables, alertas de stock mínimo y el estado de cuentas corrientes de clientes.</div>
-                </div>
-            </div>
-
-            <!-- Gráfico Visual del Flujo de Datos -->
-            <div class="arch-banner-wrap">
-                <img src="assets/pipeline_flow.jpg" alt="Flujo de Ingeniería y Analítica DC Analytics" class="arch-banner-img">
-            </div>
+    <!-- PROBLEMA -->
+    <section class="section" id="problema">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">¿Te suena?</p>
+          <h2>Vender mucho no siempre es ganar.</h2>
         </div>
+        <div class="grid-3">
+          <article class="card reveal">
+            <div class="card-ico">📦</div>
+            <h3>No sabés cuánto stock tenés</h3>
+            <p>Para saberlo hay que ir a contar. Te quedás sin lo que más sale y te sobra lo que no se mueve.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card-ico">📈</div>
+            <h3>Los costos suben y tus precios no</h3>
+            <p>El proveedor aumenta, pero la lista de precios se actualiza tarde. Mientras tanto, vendés perdiendo margen sin darte cuenta.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card-ico">🧾</div>
+            <h3>No sabés qué te deja plata</h3>
+            <p>Sabés cuánto vendiste, pero no cuánto ganaste en cada producto, ni cuánta plata está parada en el depósito.</p>
+          </article>
+        </div>
+      </div>
     </section>
 
-    <!-- SECCIÓN: INFRAESTRUCTURA TÉCNICA -->
-    <section class="section" style="padding: 60px 0; border-top: 1px solid var(--border-subtle); background-color: var(--bg-surface);">
-        <div class="container">
-            <div class="section-index text-center" style="display: flex; justify-content: center; margin-bottom: 30px;">
-                CAPACIDADES TÉCNICAS & HERRAMIENTAS
-            </div>
-            <div class="tech-stack-flex reveal">
-                <div class="tech-item">Aplicaciones Web & Móviles a Medida</div>
-                <div class="tech-separator">/</div>
-                <div class="tech-item">Control de Stock en Tiempo Real</div>
-                <div class="tech-separator">/</div>
-                <div class="tech-item">Gestión de Ventas & Cuentas Corrientes</div>
-                <div class="tech-separator">/</div>
-                <div class="tech-item">Integración con Excel & ERPs</div>
-                <div class="tech-separator">/</div>
-                <div class="tech-item">Tableros de Decisión Ejecutiva</div>
-            </div>
+    <!-- SOLUCIÓN -->
+    <section class="section section-alt" id="solucion">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Qué hacemos</p>
+          <h2>Un sistema simple, armado para cómo trabajás vos.</h2>
+          <p class="sub">No es un programa enlatado. Partimos de una base probada y la adaptamos a tus productos, tus proveedores y tu forma de vender.</p>
         </div>
+        <div class="grid-4">
+          <article class="feature reveal">
+            <span class="num">01</span>
+            <h3>Stock al día</h3>
+            <p>Entradas, salidas y stock actual de cada producto, sin planillas sueltas.</p>
+          </article>
+          <article class="feature reveal">
+            <span class="num">02</span>
+            <h3>Ventas ordenadas</h3>
+            <p>Qué se vende, cuánto, quién lo vendió y por qué canal.</p>
+          </article>
+          <article class="feature reveal">
+            <span class="num">03</span>
+            <h3>Rentabilidad real</h3>
+            <p>Margen por producto y por mes, calculado con el costo actualizado, no con el de hace tres meses.</p>
+          </article>
+          <article class="feature reveal">
+            <span class="num">04</span>
+            <h3>Alertas a tiempo</h3>
+            <p>Avisos de productos para reponer, mercadería que no rota y precios que quedaron atrasados.</p>
+          </article>
+        </div>
+      </div>
     </section>
 
-    <!-- SECCIÓN 03: SOLUCIONES -->
-    <section class="section" id="soluciones">
-        <div class="container">
-            <div class="section-index">03 // NUESTRAS SOLUCIONES</div>
-            <h2 class="section-headline reveal">Soluciones a medida para comercios, distribuidoras y pymes.</h2>
-            <p class="section-subhead reveal">Herramientas prácticas para optimizar tu circuito comercial, cuidar tu caja y tomar mejores decisiones.</p>
-
-            <div class="editorial-services-grid">
-                <!-- Solución 01 -->
-                <div class="editorial-card reveal">
-                    <div class="editorial-num">01 / SOFTWARE A MEDIDA</div>
-                    <h3 class="editorial-title">Aplicación Comercial Personalizada</h3>
-                    <p class="editorial-body">
-                        Una aplicación intuitiva y rápida adaptada 100% a tu negocio. Olvídate de sistemas genéricos complicados; diseñamos exactamente los módulos que necesitas para operar.
-                    </p>
-                    <div class="deliverables-label">Qué Puedes Hacer</div>
-                    <ul class="deliverables-list">
-                        <li>Carga rápida de ventas y pedidos diarios desde celular o PC</li>
-                        <li>Control de stock automático con alertas de reposición</li>
-                        <li>Seguimiento de cuentas corrientes y cobros a clientes</li>
-                    </ul>
-                </div>
-
-                <!-- Solución 02 -->
-                <div class="editorial-card reveal">
-                    <div class="editorial-num">02 / CONTROL EJECUTIVO</div>
-                    <h3 class="editorial-title">Tableros de Rentabilidad & Ventas</h3>
-                    <p class="editorial-body">
-                        Un panel visual en tu teléfono o computadora para ver la salud de tu negocio al instante. Identifica qué te deja ganancia real y dónde hay fugas de dinero.
-                    </p>
-                    <div class="deliverables-label">Qué Recibes</div>
-                    <ul class="deliverables-list">
-                        <li>Margen neto real por producto, categoría y sucursal</li>
-                        <li>Rendimiento y comisiones por vendedor en tiempo real</li>
-                        <li>Reportes automáticos sin tocar fórmulas de Excel</li>
-                    </ul>
-                </div>
-
-                <!-- Solución 03 -->
-                <div class="editorial-card reveal">
-                    <div class="editorial-num">03 / ORDEN & EFICIENCIA</div>
-                    <h3 class="editorial-title">Saneamiento & Automatización de Datos</h3>
-                    <p class="editorial-body">
-                        Si hoy dependes de múltiples archivos de Excel o sistemas desarticulados, limpiamos tu historial comercial, unificamos la información y automatizamos tus reportes.
-                    </p>
-                    <div class="deliverables-label">Qué Recibes</div>
-                    <ul class="deliverables-list">
-                        <li>Bases de datos consolidadas, limpias y sin duplicados</li>
-                        <li>Ahorro de hasta 15 horas semanales de tareas administrativas</li>
-                        <li>Propiedad absoluta de tus datos y del software</li>
-                    </ul>
-                </div>
-            </div>
+    <!-- CÓMO TRABAJAMOS -->
+    <section class="section" id="como">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Cómo trabajamos</p>
+          <h2>De la primera charla al sistema funcionando.</h2>
         </div>
+        <ol class="steps">
+          <li class="step reveal">
+            <span class="step-n">1</span>
+            <div><h3>Diagnóstico gratis</h3><p>Vamos a tu negocio, vemos cómo controlás hoy el stock y los precios, y te decimos dónde se te escapa plata.</p></div>
+          </li>
+          <li class="step reveal">
+            <span class="step-n">2</span>
+            <div><h3>Propuesta clara</h3><p>Te pasamos qué incluye, cuánto cuesta y en cuánto tiempo está listo. Sin letra chica.</p></div>
+          </li>
+          <li class="step reveal">
+            <span class="step-n">3</span>
+            <div><h3>Implementación</h3><p>Configuramos el sistema, cargamos tus productos y capacitamos a tu equipo.</p></div>
+          </li>
+          <li class="step reveal">
+            <span class="step-n">4</span>
+            <div><h3>Acompañamiento</h3><p>Soporte, copias de seguridad y mejoras a medida que el negocio crece.</p></div>
+          </li>
+        </ol>
+      </div>
     </section>
 
-    <!-- SECCIÓN 04: COMPARATIVA -->
-    <section class="section" id="comparativa">
-        <div class="container">
-            <div class="section-index">04 // LA DIFERENCIA DC</div>
-            <h2 class="section-headline reveal">Software a medida vs. Sistemas enlatados tradicionales.</h2>
-            <p class="section-subhead reveal">Por qué las soluciones genéricas suelen fracasar o abandonarse en los comercios y empresas locales.</p>
-
-            <div class="comparison-container">
-                <div class="comparison-grid">
-                    <div class="comp-col traditional reveal">
-                        <span class="comp-badge">Sistemas Enlatados / Software Tradicional</span>
-                        <div class="comp-title">Rígidos, Complejos & Costosos</div>
-                        <ul class="comp-list">
-                            <li>
-                                <span class="icon-cross">✕</span>
-                                <span>Abonos mensuales costosos y licencias por usuario que aumentan todos los meses.</span>
-                            </li>
-                            <li>
-                                <span class="icon-cross">✕</span>
-                                <span>Cientos de funciones y botones innecesarios que confunden y demoran a tus empleados.</span>
-                            </li>
-                            <li>
-                                <span class="icon-cross">✕</span>
-                                <span>Soporte técnico telefónico impersonal que tarda días en responder un problema urgente.</span>
-                            </li>
-                            <li>
-                                <span class="icon-cross">✕</span>
-                                <span>Tu negocio tiene que adaptarse forzosamente al sistema, y no el sistema a tu negocio.</span>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="comp-col dc reveal">
-                        <span class="comp-badge">DC Analytics Studio</span>
-                        <div class="comp-title">Hecho a Tu Medida & Fácil de Usar</div>
-                        <ul class="comp-list">
-                            <li>
-                                <span class="icon-check">✓</span>
-                                <span>Desarrollado exactamente para el flujo de trabajo real de tu negocio o distribuidora.</span>
-                            </li>
-                            <li>
-                                <span class="icon-check">✓</span>
-                                <span>Interfaz limpia y ultra intuitiva: cualquier empleado aprende a usarla en 10 minutos.</span>
-                            </li>
-                            <li>
-                                <span class="icon-check">✓</span>
-                                <span>Acompañamiento directo y soporte cercano de quien diseñó la solución.</span>
-                            </li>
-                            <li>
-                                <span class="icon-check">✓</span>
-                                <span>Enfoque total en rentabilidad: control estricto de tu stock, caja y ventas en tiempo real.</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+    <!-- POR QUÉ -->
+    <section class="section section-alt" id="por-que">
+      <div class="container why">
+        <div class="why-copy reveal">
+          <p class="eyebrow">Por qué DC Analytics</p>
+          <h2>Tecnología a medida, con alguien de acá del otro lado.</h2>
+          <p class="sub">Soy Daniel Codda, analista de datos y desarrollador en Formosa. Armé DC Analytics para que los comercios de la zona tengan las mismas herramientas que usan las grandes empresas para cuidar su margen, pero simples y adaptadas a su realidad.</p>
         </div>
+        <ul class="why-list reveal">
+          <li><b>Local.</b> Vamos a tu negocio y respondemos rápido.</li>
+          <li><b>Foco en la ganancia.</b> No solo registramos: te mostramos dónde ganás y dónde perdés.</li>
+          <li><b>A medida, pero rápido.</b> Partimos de una base propia, no de cero.</li>
+          <li><b>Tus datos son tuyos.</b> Con copias de seguridad y confidencialidad.</li>
+        </ul>
+      </div>
     </section>
 
-    <!-- SECCIÓN 05: CASO TÉCNICO DESTACADO -->
-    <section class="section" id="caso-estudio">
-        <div class="container">
-            <div class="section-index">05 // CASO DE ÉXITO VALIDADO</div>
-            <div class="case-panel">
-                <div class="case-split">
-                    <div>
-                        <span class="nav-badge" style="margin-bottom: 12px; display: inline-block;">Sector Distribución & Comercio Mayorista</span>
-                        <h2 class="case-headline">Control Integral de Stock, Ventas y Rentabilidad Neta</h2>
-                        <p class="case-context">
-                            En una empresa comercial con más de 2,500 artículos y operaciones diarias que sufría desajustes en el stock y falta de claridad en el margen real por línea de venta, implementamos una aplicación a medida y un panel de control financiero en tiempo real.
-                        </p>
-                        
-                        <div class="stat-pills">
-                            <div class="pill-metric">
-                                <div class="num">+18.4%</div>
-                                <div class="lbl">Margen Neto Optimizado</div>
-                            </div>
-                            <div class="pill-metric">
-                                <div class="num">0%</div>
-                                <div class="lbl">Quiebres de Stock Crítico</div>
-                            </div>
-                            <div class="pill-metric">
-                                <div class="num">15hs</div>
-                                <div class="lbl">Ahorro Semanal de Tareas</div>
-                            </div>
-                        </div>
-
-                        <!-- Imagen Vista Previa del Dashboard -->
-                        <div class="case-img-card">
-                            <img src="assets/dashboard_preview.jpg" alt="Dashboard Ejecutivo DC Analytics" class="case-img">
-                        </div>
-                    </div>
-
-                    <!-- Simulador de Impacto Financiero -->
-                    <div class="calc-card">
-                        <div class="calc-title">Simulador de Recuperación de Capital</div>
-                        <div class="calc-caption">Calcula el dinero inmovilizado y las pérdidas operativas que puedes recuperar optimizando tu stock y márgenes:</div>
-
-                        <div class="calc-slider-wrap">
-                            <div class="calc-header-flex">
-                                <span>Eficiencia & Stock Optimizado:</span>
-                                <strong id="sliderVal" style="color: var(--accent-sky); font-family: var(--font-mono);">15%</strong>
-                            </div>
-                            <input type="range" id="churnSlider" class="range-input" min="5" max="40" value="15" step="1">
-                        </div>
-
-                        <div class="calc-display">
-                            <div class="calc-display-amount" id="roiResult">$72,000 USD</div>
-                            <div class="calc-display-sub">Capital Recuperable Estimado</div>
-                        </div>
-
-                        <a href="#contacto" class="btn btn-primary" style="width: 100%;">Consultar sobre mi negocio</a>
-                    </div>
-                </div>
-            </div>
+    <!-- CONTACTO -->
+    <section class="section contact" id="contacto">
+      <div class="container contact-box reveal">
+        <h2>¿Charlamos 20 minutos?</h2>
+        <p class="sub">Coordinamos una visita, vemos cómo trabajás hoy y te llevás un diagnóstico de tu negocio. Sin costo y sin compromiso.</p>
+        <div class="contact-ctas">
+          <a class="btn btn-primary btn-lg" data-wa href="https://wa.me/5493704325018">
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3a.5.5 0 0 0 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.1 5.1 0 0 0 1.1 2.7 11.7 11.7 0 0 0 4.5 4c1.7.7 2.3.8 3.2.7a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.4-.3Z"/></svg>
+            Escribime por WhatsApp
+          </a>
+          <a class="btn btn-ghost btn-lg" href="mailto:codda.analytics@gmail.com?subject=Consulta%20desde%20la%20web">codda.analytics@gmail.com</a>
         </div>
+        <p class="contact-meta">📍 Formosa, Argentina · WhatsApp +54 9 370 432-5018</p>
+      </div>
     </section>
+  </main>
 
-    <!-- SECCIÓN 06: CONTACTO DIRECTO -->
-    <section class="section" id="contacto" style="border-bottom: none;">
-        <div class="container">
-            <div class="contact-block">
-                <div class="section-index">06 // INICIAR CONVERSACIÓN</div>
-                <h2 class="contact-headline">¿Querés poner orden en las ventas y el stock de tu negocio?</h2>
-                <p class="contact-subtext">
-                    Sin intermediarios ni presentaciones teóricas. Conversemos 15 minutos directamente para evaluar cómo trabajas hoy y diseñar una solución simple que le sirva a tu empresa.
-                </p>
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© <span id="year">2026</span> DC Analytics · Daniel Codda</span>
+      <span>Stock, ventas y rentabilidad para pymes</span>
+    </div>
+  </footer>
 
-                <div class="contact-button-row">
-                    <a href="#" class="btn btn-primary btn-whatsapp" data-phone="5493704325018" style="padding: 14px 28px; font-size: 15px;">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: block;">
-                            <path d="M19.05 4.91C17.18 3.03 14.69 2 12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91ZM12.04 20.15C10.56 20.15 9.11 19.76 7.85 19.01L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.8 13.47 3.8 11.91C3.8 7.37 7.5 3.67 12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15ZM16.56 14.39C16.31 14.26 15.09 13.66 14.86 13.58C14.64 13.5 14.47 13.46 14.3 13.71C14.13 13.96 13.65 14.53 13.5 14.7C13.36 14.87 13.21 14.89 12.96 14.76C12.71 14.64 11.91 14.38 10.96 13.53C10.22 12.87 9.72 12.06 9.58 11.81C9.43 11.56 9.56 11.43 9.69 11.3C9.8 11.19 9.94 11.01 10.06 10.86C10.19 10.72 10.23 10.61 10.31 10.45C10.39 10.28 10.35 10.14 10.29 10.01C10.23 9.89 9.73 8.67 9.53 8.17C9.33 7.68 9.12 7.75 8.97 7.74C8.83 7.73 8.66 7.73 8.49 7.73C8.32 7.73 8.05 7.79 7.82 8.04C7.59 8.29 6.95 8.89 6.95 10.11C6.95 11.33 7.84 12.5 7.96 12.67C8.09 12.83 9.71 15.33 12.19 16.4C12.78 16.66 13.24 16.81 13.6 16.92C14.2 17.11 14.74 17.08 15.17 17.02C15.65 16.95 16.65 16.41 16.86 15.82C17.07 15.24 17.07 14.74 17.01 14.64C16.95 14.53 16.81 14.47 16.56 14.39Z" fill="#050E20"/>
-                        </svg>
-                        <span>Escribir por WhatsApp</span>
-                    </a>
-                    <a href="mailto:codda.analytics@gmail.com" class="btn btn-ghost" style="padding: 14px 28px; font-size: 15px;">
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: block;">
-                            <path d="M22.5 5.5V18.5C22.5 19.6 21.6 20.5 20.5 20.5H18V11L12 15.5L6 11V20.5H3.5C2.4 20.5 1.5 19.6 1.5 18.5V5.5C1.5 3.75 3.5 2.75 4.9 3.8L12 9.15L19.1 3.8C20.5 2.75 22.5 3.75 22.5 5.5Z" fill="#EA4335"/>
-                            <path d="M1.5 5.5C1.5 3.75 3.5 2.75 4.9 3.8L12 9.15L19.1 3.8C20.5 2.75 22.5 3.75 22.5 5.5V6.75L12 14.65L1.5 6.75V5.5Z" fill="#C5221F"/>
-                            <path d="M1.5 6.75V18.5C1.5 19.6 2.4 20.5 3.5 20.5H6V11L1.5 6.75Z" fill="#4285F4"/>
-                            <path d="M18 11V20.5H20.5C21.6 20.5 22.5 19.6 22.5 18.5V6.75L18 11Z" fill="#34A853"/>
-                            <path d="M18 4.65L12 9.15L6 4.65V3.5L12 8L18 3.5V4.65Z" fill="#FBBC04"/>
-                        </svg>
-                        <span>Enviar un Correo</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
+  <a class="wa-float" data-wa href="https://wa.me/5493704325018" aria-label="Escribir por WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3a.5.5 0 0 0 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.1 5.1 0 0 0 1.1 2.7 11.7 11.7 0 0 0 4.5 4c1.7.7 2.3.8 3.2.7a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.4-.3Z"/></svg>
+  </a>
 
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="container">
-            <div>
-                <strong>DC Analytics</strong> &bull; Software a Medida & Control de Gestión para Empresas
-            </div>
-            <div>
-                &copy; 2026 DC Analytics. Propiedad Intelectual Registrada.
-            </div>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
