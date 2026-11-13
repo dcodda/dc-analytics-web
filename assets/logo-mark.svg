@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="8 0 200 140" fill="none">
+  <!-- Monograma DC (vector). La C pasa por encima de la D arriba y por debajo abajo. -->
+  <defs>
+    <clipPath id="dcTop"><rect x="0" y="0" width="220" height="70"/></clipPath>
+    <clipPath id="dcBot"><rect x="0" y="70" width="220" height="70"/></clipPath>
+    <mask id="dcMaskD" maskUnits="userSpaceOnUse" x="0" y="0" width="220" height="140">
+      <rect width="220" height="140" fill="#fff"/>
+      <path clip-path="url(#dcTop)" d="M182.43 112.43 A60 60 0 1 1 182.43 27.57" stroke="#000" stroke-width="20"/>
+    </mask>
+    <mask id="dcMaskC" maskUnits="userSpaceOnUse" x="0" y="0" width="220" height="140">
+      <rect width="220" height="140" fill="#fff"/>
+      <path clip-path="url(#dcBot)" d="M20 10 V130 H60 A60 60 0 0 0 60 10 Z" stroke="#000" stroke-width="20"/>
+    </mask>
+  </defs>
+  <g stroke="#FFFFFF" stroke-width="10">
+    <path mask="url(#dcMaskD)" d="M20 10 V130 H60 A60 60 0 0 0 60 10 Z"/>
+    <path mask="url(#dcMaskC)" d="M182.43 112.43 A60 60 0 1 1 182.43 27.57"/>
+  </g>
+  <circle cx="100" cy="70" r="7" fill="#B98A3E"/>
+</svg>
